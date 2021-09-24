@@ -1,1 +1,1 @@
-# seismic-inversion
+# Seismic inversion
