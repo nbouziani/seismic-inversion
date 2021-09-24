@@ -146,7 +146,7 @@ def seismic_inversion(regulariser, scale_noise, alpha):
 
 def save_fig(c, name):
     fig = tripcolor(c)
-    # plt.title('Velocity model: ' + name)
+    plt.title('Velocity model: ' + name)
     plt.axis('off')
     plt.colorbar(fig, shrink=0.907)
     name = name.lower()
