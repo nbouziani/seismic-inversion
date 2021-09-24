@@ -14,7 +14,7 @@ In order to run the example, you need to have a working firedrake installation.
   pip install -r requirements.txt
   ```
 
-## Seismic inversion example
+## Seismic inversion
 
 The seismic inversion can be run via the `seismic_inversion.py` file. When running the file you can specify:
 
