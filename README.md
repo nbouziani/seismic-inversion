@@ -47,3 +47,8 @@ Here are the corresponding figures:
   <figcaption align = "center"><b>Velocity obtained with: Exact solution (upper left), neural network regularisation (upper right), Tikhonov regularisation (lower left), no regularisation (lower right)  </b></figcaption>
 </p>
 
+
+
+
+[![DOI](https://zenodo.org/badge/409780239.svg)](https://zenodo.org/badge/latestdoi/409780239)
+
