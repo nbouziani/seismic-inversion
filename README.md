@@ -2,6 +2,9 @@
 
 This repository is the official implementation of **Escaping the abstraction: a foreign function interface for the Unified Form Language [UFL]**.
 
+[![DOI](https://zenodo.org/badge/409780239.svg)](https://zenodo.org/badge/latestdoi/409780239)
+
+
 ## Requirements
 
 In order to run the example, you need to have a working firedrake installation.
@@ -48,7 +51,4 @@ Here are the corresponding figures:
 </p>
 
 
-
-
-[![DOI](https://zenodo.org/badge/409780239.svg)](https://zenodo.org/badge/latestdoi/409780239)
 
