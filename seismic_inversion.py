@@ -102,9 +102,9 @@ def seismic_inversion(regulariser, scale_noise, alpha):
         return phi
 
     # Build observed data by adding noise
-    phi_exact = F(c_exact)
+    phi_obs = F(c_exact)
     noise = scale_noise * np.random.rand(V.node_count)
-    phi_exact.dat.data[:] += noise
+    phi_obs.dat.data[:] += noise
 
     # Load the neural network
     import torch
@@ -123,17 +123,17 @@ def seismic_inversion(regulariser, scale_noise, alpha):
 
     if regulariser == 0:
         print('\n --- Problem without regularisation --- \n')
-        J = assemble(0.5 * (inner(phi - phi_exact, phi - phi_exact)) * dx)
+        J = assemble(0.5 * (inner(phi - phi_obs, phi - phi_obs)) * dx)
         Jhat = ReducedFunctional(J, Control(vel))
         c_opt = minimize(Jhat, method="L-BFGS-B", tol=1.0e-10, options={"disp": True, "maxiter": 20})
     elif regulariser == 1:
         print('\n --- Problem with Tikhonov regularisation --- \n')
-        J = assemble(0.5 * (inner(phi - phi_exact, phi - phi_exact) + alpha * inner(vel, vel)) * dx)
+        J = assemble(0.5 * (inner(phi - phi_obs, phi - phi_obs) + alpha * inner(vel, vel)) * dx)
         Jhat = ReducedFunctional(J, Control(vel))
         c_opt = minimize(Jhat, method="L-BFGS-B", tol=1.0e-10, options={"disp": True, "maxiter": 20})
     elif regulariser == 2:
         print('\n --- Problem with neural network regularisation --- \n')
-        J = assemble(0.5 * (inner(phi - phi_exact, phi - phi_exact) + alpha * inner(N, N)) * dx)
+        J = assemble(0.5 * (inner(phi - phi_obs, phi - phi_obs) + alpha * inner(N, N)) * dx)
         Jhat = ReducedFunctional(J, Control(vel))
         c_opt = minimize(Jhat, method="L-BFGS-B", tol=1.0e-10, options={"disp": True, "maxiter": 20})
     else:
