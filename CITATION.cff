@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Bouziani"
+  given-names: "Nacime"
+  orcid: "https://orcid.org/0000-0002-1692-0173"
+- family-names: "Ham"
+  given-names: "David"
+title: "Seismic inversion using neural network regularisation implemented as an ExternalOperator in Firedrake"
+version: 1.0
+doi: 10.5281/zenodo.5526273
+date-released: 2021-09-24
+url: "https://github.com/nbouziani/seismic-inversion"
+
