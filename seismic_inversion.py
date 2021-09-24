@@ -8,6 +8,9 @@
 #
 # Run command to reproduce the article figures: `python seismic_inversion.py -regulariser 0 1 2`
 
+import os
+from zipfile import ZipFile
+
 from firedrake import *
 from firedrake_adjoint import *
 
@@ -16,7 +19,13 @@ import matplotlib.pyplot as plt
 import argparse
 
 
-# -- Parsing -- #
+# -- Parsing and model extraction -- #
+
+# Extract the saved model
+if not os.path.exists('./models/model.pth'):
+    with ZipFile('./models/model.zip', 'r') as z:
+        z.extractall('./models/')
+    print('\n Extraction of the saved model: completed!\n')
 
 # Retrieve arguments
 parser = argparse.ArgumentParser()
