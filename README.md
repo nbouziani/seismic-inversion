@@ -1,6 +1,6 @@
 # Seismic inversion: Neural network regularisation using ExternalOperator
 
-This repository is the official implementation of **Escaping the abstraction: a foreign function interface for the Unified Form Language [UFL]**.
+This repository is the official implementation of the seismic inversion example in "[Escaping the abstraction: a foreign function interface for the Unified Form Language [UFL]](https://arxiv.org/abs/2111.00945)", accepted at NeurIPS 2021 (Differentiable Programming workshop) and received the **Best Paper award**.
 
 [![DOI](https://zenodo.org/badge/409780239.svg)](https://zenodo.org/badge/latestdoi/409780239)
 
@@ -50,5 +50,18 @@ Here are the corresponding figures:
   <figcaption align = "center"><b>Velocity obtained with: Exact solution (upper left), neural network regularisation (upper right), Tikhonov regularisation (lower left), no regularisation (lower right)  </b></figcaption>
 </p>
 
+
+## Citation
+
+If you found this work to be useful, then please cite: ([arXiv paper](https://arxiv.org/abs/2111.00945))
+
+```bibtex
+@article{bouziani-ham-2021-escaping,
+    author={Nacime Bouziani and David A. Ham},
+    title={Escaping the abstraction: a foreign function interface for the {Unified} {Form} {Language} [{UFL}]},
+    year={2021},
+    journal={Differentiable Programming workshop at Neural Information Processing Systems 2021}
+}
+```
 
 
